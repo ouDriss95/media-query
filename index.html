@@ -21,6 +21,42 @@
       align-items: center;
       justify-content: center;
     }
+    /* From 400px and beyond */
+    @media screen and (min-width: 400px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+      .box {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+    /* From 800px and beyond */
+    @media screen and (min-width: 800px) {
+      .container {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .box {
+        background-color: green;
+        color: #fff;
+      }
+    }
+    /* From 1000px and beyond */
+    @media screen and (min-width: 1000px) {
+      .container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .box {
+        background-color: orange;
+        color: #fff;
+      }
+    }
+    /* Hide boxed between 250px to 900px */
+    @media screen and (min-width: 850px) and (max-width: 900px) {
+      .box {
+        display: none;
+      }
+    }
   </style>
 
   <body>
@@ -31,6 +67,7 @@
       <div class="box">4</div>
       <div class="box">5</div>
       <div class="box">6</div>
+      <div class="box">7</div>
     </div>
   </body>
 </html>
